@@ -39,7 +39,7 @@ const Project = ({ project }: ProjectProps) => {
           <img
             src={img.src}
             alt={`image of ${title}`}
-            className="z-10 absolute bottom-0 w-[460px] h-[300px] rotate-[4deg] rounded-t-lg translate-y-[15px] object-cover object-left-top"
+            className="z-10 absolute bottom-0 w-[460px] h-[300pbx] rotate-[4deg] rounded-t-lg translate-y-[15px] object-cover object-left-top"
           />
         </div>
         <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
