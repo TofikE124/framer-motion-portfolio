@@ -1,7 +1,35 @@
+import {
+  angular,
+  api,
+  Audiophile,
+  css,
+  Designo,
+  EntertainmentWebApp,
+  firebase,
+  framer_motion,
+  InteractiveCommentsSection,
+  InvoiceApp,
+  IssueTracker,
+  KanbanTaskManagment,
+  local_storage,
+  MultiStepForm,
+  next_js,
+  Oshop,
+  prisma,
+  ProductFeedbackApp,
+  reactjs,
+  RockPaperScissors,
+  scss,
+  SpaceTravel,
+  tailwind,
+  WhereInTheWorld,
+} from "@/public";
+import { StaticImageData } from "next/image";
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "My Approach", link: "#approach" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -49,9 +77,9 @@ export const gridItems = [
 
   {
     id: 5,
-    title: "Currently building a JS Animation library",
+    title: "Currently working on a 'Connect 4' game",
     description: "The Inside Scoop",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-2",
+    className: "lg:col-span-3 md:col-span-3 md:row-span-2",
     imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
     titleClassName: "justify-center md:justify-start lg:justify-center",
     img: "/b5.svg",
@@ -69,42 +97,225 @@ export const gridItems = [
   },
 ];
 
-export const projects = [
+export interface TagType {
+  name: string;
+  icon: StaticImageData;
+}
+enum TAG {
+  REACT = "react",
+  NEXT_JS = "next.js",
+  ANGULAR = "angular",
+  TAILWIND = "tailwind",
+  CSS = "css",
+  SCSS = "scss",
+  API = "api",
+  LOCAL_STORAGE = "localStorage",
+  FIREBASE = "firebase",
+  PRISMA = "prisma",
+  FRAMER_MOTION = "Framer Motion",
+}
+
+const tags: Record<TAG, TagType> = {
+  [TAG.REACT]: {
+    name: "react",
+    icon: reactjs,
+  },
+  [TAG.NEXT_JS]: {
+    name: "next.js",
+    icon: next_js,
+  },
+  [TAG.ANGULAR]: {
+    name: "angular",
+    icon: angular,
+  },
+  [TAG.TAILWIND]: {
+    name: "tailwind",
+    icon: tailwind,
+  },
+  [TAG.CSS]: {
+    name: "css",
+    icon: css,
+  },
+  [TAG.SCSS]: {
+    name: "scss",
+    icon: scss,
+  },
+  [TAG.API]: {
+    name: "api",
+    icon: api,
+  },
+
+  [TAG.LOCAL_STORAGE]: {
+    name: "localStorage",
+    icon: local_storage,
+  },
+  [TAG.FIREBASE]: {
+    name: "firebase",
+    icon: firebase,
+  },
+  [TAG.PRISMA]: {
+    name: "prisma",
+    icon: prisma,
+  },
+  [TAG.FRAMER_MOTION]: {
+    name: "framer motion",
+    icon: framer_motion,
+  },
+};
+
+export interface Project {
+  id: number;
+  title: string;
+  des: string;
+  img: StaticImageData;
+  tags: TagType[];
+  live_link: string;
+  source_code_link: string;
+}
+
+// Project interface
+export interface Project {
+  id: number;
+  title: string;
+  des: string;
+  img: StaticImageData;
+  tags: TagType[];
+  live_link: string;
+  source_code_link: string;
+}
+
+export const projects: Project[] = [
+  {
+    id: 5,
+    title: "Kanban Task Management App",
+    des: "Manage tasks with custom boards using React and local storage.",
+    img: KanbanTaskManagment,
+    tags: [tags["next.js"], tags["Framer Motion"], tags.tailwind, tags.prisma],
+    live_link: "https://task-management-app-lovat.vercel.app",
+    source_code_link: "https://github.com/TofikE124/task-management-app",
+  },
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    title: "Product Feedback App",
+    des: "Submit and discuss ideas with this Next.js, Prisma & NextAuth app.",
+    img: ProductFeedbackApp,
+    tags: [tags["next.js"], tags.scss, tags.tailwind, tags.prisma],
+    live_link: "https://product-feedback-app-beta-five.vercel.app",
+    source_code_link: "https://github.com/TofikE124/Product-Feedback-App",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    title: "Invoice App",
+    des: "Create and manage invoices effortlessly with Next.js, Prisma & NextAuth.",
+    img: InvoiceApp,
+    tags: [tags["next.js"], tags.scss, tags.tailwind, tags.prisma],
+    live_link: "https://invoice-app-kvha.vercel.app",
+    source_code_link: "https://github.com/TofikE124/invoice-app",
   },
   {
     id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
+    title: "O-Shop",
+    des: "Seamless shopping experience for organics with Angular and Firebase.",
+    img: Oshop,
+    tags: [tags.angular, tags.firebase, tags.tailwind],
+    live_link: "https://angular-shopping-8a56d.web.app/",
+    source_code_link: "https://github.com/TofikE124/angular-shopping",
   },
   {
     id: 4,
-    title: "Animated Apple Iphone 3D Website",
-    des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-    img: "/p4.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    title: "Entertainment Web App",
+    des: "Explore movies and TV shows with React.",
+    img: EntertainmentWebApp,
+    tags: [tags.angular, tags.firebase, tags.tailwind],
+    live_link:
+      "https://entertainment-web-app-angular-three.vercel.app/library/home",
+    source_code_link:
+      "https://github.com/TofikE124/entertainment-web-app-angular",
+  },
+  {
+    id: 6,
+    title: "Where in the world?",
+    des: "Find countries by name or region with Angular and REST Countries API.",
+    img: WhereInTheWorld,
+    tags: [tags.angular, tags.api],
+    live_link: "https://tofik-where-in-the-world.netlify.app",
+    source_code_link: "https://github.com/TofikE124/where-in-the-world-angular",
+  },
+  {
+    id: 7,
+    title: "Designo",
+    des: "Showcase of web, app, and graphic designs with React and CSS.",
+    img: Designo,
+    tags: [tags.react, tags.css],
+    live_link: "https://gorgeous-brioche-7c0074.netlify.app",
+    source_code_link: "https://github.com/TofikE124/Designo",
+  },
+  {
+    id: 8,
+    title: "Rock Paper Scissors Lizard Spock",
+    des: "Play the classic game with Next.js and SCSS.",
+    img: RockPaperScissors,
+    tags: [tags["next.js"], tags.scss],
+    live_link: "https://rock-paper-scissors-eta-sepia.vercel.app",
+    source_code_link: "https://github.com/TofikE124/rock-paper-scissors",
+  },
+  {
+    id: 9,
+    title: "Audiophile",
+    des: "Shop for headphones with React and local storage.",
+    img: Audiophile,
+    tags: [tags.react, tags.css, tags.localStorage],
+    live_link: "https://brilliant-begonia-545122.netlify.app",
+    source_code_link:
+      "https://github.com/TofikE124/Audiophile-Ecommerce-Website",
+  },
+  {
+    id: 10,
+    title: "Interactive Comments Section",
+    des: "Comment, upvote, and downvote with Next.js, NextAuth, and Prisma.",
+    img: InteractiveCommentsSection,
+    tags: [tags["next.js"], tags.prisma, tags.tailwind],
+    live_link: "https://interactive-comments-section-pxi1.vercel.app",
+    source_code_link:
+      "https://github.com/TofikE124/interactive-comments-section",
+  },
+  {
+    id: 11,
+    title: "Issue Tracker",
+    des: "Add and categorize issues with Next.js, Prisma, and NextAuth.",
+    img: IssueTracker,
+    tags: [tags["next.js"], tags.prisma, tags.tailwind],
+    live_link: "https://issue-tracker-u639.vercel.app",
+    source_code_link: "https://github.com/TofikE124/Designo",
+  },
+  {
+    id: 12,
+    title: "Multi Step Form",
+    des: "Sleek multi-form web page with React, React Hook Form, and Zod.",
+    img: MultiStepForm,
+    tags: [tags.react, tags.css],
+    live_link: "https://inspiring-truffle-aa8631.netlify.app",
+    source_code_link: "https://github.com/TofikE124/MultiForm",
+  },
+  {
+    id: 13,
+    title: "Space Travel",
+    des: "Explore planets, astronauts, and rocket tech with React.",
+    img: SpaceTravel,
+    tags: [tags.react, tags.css],
+    live_link: "https://symphonious-faun-36c411.netlify.app",
+    source_code_link: "https://github.com/TofikE124/Space-Travel",
   },
 ];
 
-export const testimonials = [
+// Testimonials type
+interface Testimonial {
+  quote: string;
+  name: string;
+  title: string;
+}
+
+export const testimonials: Testimonial[] = [
   {
     quote:
       "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
@@ -137,7 +348,15 @@ export const testimonials = [
   },
 ];
 
-export const companies = [
+// Company type
+interface Company {
+  id: number;
+  name: string;
+  img: string;
+  nameImg: string;
+}
+
+export const companies: Company[] = [
   {
     id: 1,
     name: "cloudinary",
@@ -170,7 +389,16 @@ export const companies = [
   },
 ];
 
-export const workExperience = [
+// Work experience type
+interface WorkExperience {
+  id: number;
+  title: string;
+  desc: string;
+  className: string;
+  thumbnail: string;
+}
+
+export const workExperience: WorkExperience[] = [
   {
     id: 1,
     title: "Frontend Engineer Intern",
@@ -201,17 +429,22 @@ export const workExperience = [
   },
 ];
 
-export const socialMedia = [
+// Social media type
+interface SocialMedia {
+  id: number;
+  img: string;
+  link: string;
+}
+
+export const socialMedia: SocialMedia[] = [
   {
     id: 1,
     img: "/git.svg",
-  },
-  {
-    id: 2,
-    img: "/twit.svg",
+    link: "https://github.com/TofikE124",
   },
   {
     id: 3,
     img: "/link.svg",
+    link: "www.linkedin.com/in/tofike124",
   },
 ];

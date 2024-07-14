@@ -6,7 +6,7 @@ import { socialMedia } from "@/data";
 const Footer = () => {
   return (
     <footer
-      className="w-full pt-20 pb-10 relative overflow-hidden"
+      className="w-full pt-20 pb-10 mb-10 relative overflow-hidden"
       id="contact"
     >
       <div className="w-full absolute top-0 left-0 min-h-96">
@@ -38,18 +38,15 @@ const Footer = () => {
           Copyright © 2024 Tofik Elias
         </p>
         <div className="flex items-center md:gap-3 lg:gap-6 gap-2 mt-4 md:mt-0">
-          {socialMedia.map((profile) => (
-            <div
-              key={profile.id}
+          {socialMedia.map(({ id, img, link }) => (
+            <a
+              key={id}
               className="size-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-150 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
+              href={link}
+              target="_blank"
             >
-              <img
-                src={profile.img}
-                alt="Profile image"
-                width={20}
-                height={20}
-              />
-            </div>
+              <img src={img} alt="Profile image" width={20} height={20} />
+            </a>
           ))}
         </div>
       </div>

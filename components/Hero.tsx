@@ -55,7 +55,7 @@ const HeroContent = () => {
         <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
           Hi, I&apos;m Tofik, a Next.js Developer based in Israel
         </p>
-        <a href="#about">
+        <a href="#projects">
           <MagicButton
             title="Show my Work"
             icon={<FaLocationArrow></FaLocationArrow>}

@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 const Approach = () => {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-20" id="approach">
       <h1 className="heading">
         My <span className="text-purple">approach</span>
       </h1>
@@ -26,7 +26,7 @@ const Approach = () => {
         <Card
           title="Development & Progress Update"
           icon={<AceternityIcon order="Phase 2" />}
-          des="Once we agree on the plan, I cue my lofi playlist and dive into
+          des="Once we agree on the plan, I crack my fingers and dive into
           coding. From initial sketches to polished code, I keep you updated
           every step of the way."
         >
@@ -48,7 +48,7 @@ const Approach = () => {
         <Card
           title="Development & Launch"
           icon={<AceternityIcon order="Phase 3" />}
-          des="This is where the magic happens! Based on the approved design, 
+          des="Based on the approved design, 
           I'll translate everything into functional code, building your website
           from the ground up."
         >
