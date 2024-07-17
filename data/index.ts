@@ -205,6 +205,15 @@ export const projects: Project[] = [
     source_code_link: "https://github.com/TofikE124/pomodoro-app",
   },
   {
+    id: 14,
+    title: "Link Sharing App",
+    des: "Create and share your personal link tree easily using Next.js and Prisma",
+    img: Pomodoro,
+    tags: [tags["next.js"], tags["Framer Motion"], tags.prisma, tags.tailwind],
+    live_link: "https://link-sharing-app-bay.vercel.app",
+    source_code_link: "https://github.com/TofikE124/link-sharing-app",
+  },
+  {
     id: 1,
     title: "Product Feedback App",
     des: "Submit and discuss ideas with this Next.js, Prisma & NextAuth app.",
