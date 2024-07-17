@@ -33,13 +33,13 @@ const Project = ({ project }: ProjectProps) => {
     >
       <PinContainer title={live_link} href={live_link}>
         <div className="relative flex items-center justify-center sm:w-[570px] w-[80vw] h-full overflow-hidden mb-10">
-          <div className="relative size-full overflow-hidden rounded-3xl bg-[#13162d] h-[350px] md:h-[400px]">
-            <img src="/bg.png" alt="bg-img" />
+          <div className="relative size-full overflow-hidden rounded-3xl bg-[#13162d] h-[350px] md:h-[400px] flex items-center justify-center">
+            <img src="/bg.png" alt="bg-img" className="absolute inset-0" />
           </div>
           <img
             src={img.src}
             alt={`image of ${title}`}
-            className="z-10 absolute bottom-0 w-[460px] h-[300pbx] rotate-[4deg] rounded-t-lg translate-y-[15px] object-cover object-left-top"
+            className="absolute z-10  w-full  rounded-lg sm:bottom-[-16px] sm:w-[460px] sm:h-[300px] h-full sm:rotate-[4deg] sm:rounded-b-none object-cover object-left-top"
           />
         </div>
         <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
@@ -61,7 +61,7 @@ interface ProjectFooterProps {
 
 const ProjectFooter = ({ tags, live_link }: ProjectFooterProps) => {
   return (
-    <div className="flex items-center justify-between mt-7 mb-3">
+    <div className="flex items-center justify-between mt-4">
       <div className="flex items-center">
         {tags.map(({ icon, name }, index) => (
           <div
@@ -78,11 +78,11 @@ const ProjectFooter = ({ tags, live_link }: ProjectFooterProps) => {
         ))}
       </div>
       <a
-        className="flex justify-center items-center"
+        className="relative flex justify-center items-center py-3 after:absolute after:content-[''] after:bottom-[8px] after:left-[50%] after:translate-x-[-50%]  after:h-[2px] after:bg-purple after:w-0 hover:after:w-full after:transition-[width] after:duration-200"
         href={live_link}
         target="_blank"
       >
-        <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+        <p className="relative flex lg:text-xl md:text-xs text-sm text-purple">
           Check source code
         </p>
         <FaLocationArrow className="ms-3" color="#CBACF9"></FaLocationArrow>

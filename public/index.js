@@ -34,6 +34,7 @@ import SpaceTravel from "./work/SpaceTravel.jpg";
 import WhereInTheWorld from "./work/WhereInTheWorld.png";
 import InvoiceApp from "./work/InvoiceApp.png";
 import Oshop from "./work/Oshop.png";
+import Pomodoro from "./work/Pomodoro.png";
 
 export {
   css,
@@ -71,4 +72,5 @@ export {
   WhereInTheWorld,
   InvoiceApp,
   Oshop,
+  Pomodoro,
 };

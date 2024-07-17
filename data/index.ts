@@ -15,6 +15,7 @@ import {
   MultiStepForm,
   next_js,
   Oshop,
+  Pomodoro,
   prisma,
   ProductFeedbackApp,
   reactjs,
@@ -193,6 +194,15 @@ export const projects: Project[] = [
     tags: [tags["next.js"], tags["Framer Motion"], tags.tailwind, tags.prisma],
     live_link: "https://task-management-app-lovat.vercel.app",
     source_code_link: "https://github.com/TofikE124/task-management-app",
+  },
+  {
+    id: 14,
+    title: "Pomodoro App",
+    des: "Track and manage your time effectively using the Pomodoro Technique with Angular and Tailwind.",
+    img: Pomodoro,
+    tags: [tags.angular, tags.tailwind, tags.scss],
+    live_link: "https://pomodoro-app-flame-eight.vercel.app",
+    source_code_link: "https://github.com/TofikE124/pomodoro-app",
   },
   {
     id: 1,
