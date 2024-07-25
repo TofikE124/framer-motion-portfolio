@@ -11,6 +11,11 @@ import {
   InvoiceApp,
   IssueTracker,
   KanbanTaskManagment,
+  LinkSharing,
+  ConnectFourGame,
+  HangmanGame,
+  MemoryGame,
+  WhereInTheWorld,
   local_storage,
   MultiStepForm,
   next_js,
@@ -23,7 +28,6 @@ import {
   scss,
   SpaceTravel,
   tailwind,
-  WhereInTheWorld,
 } from "@/public";
 import { StaticImageData } from "next/image";
 
@@ -189,7 +193,7 @@ export const projects: Project[] = [
   {
     id: 5,
     title: "Kanban Task Management App",
-    des: "Manage tasks with custom boards using React and local storage.",
+    des: "Manage tasks efficiently with custom boards.",
     img: KanbanTaskManagment,
     tags: [tags["next.js"], tags["Framer Motion"], tags.tailwind, tags.prisma],
     live_link: "https://task-management-app-lovat.vercel.app",
@@ -198,7 +202,7 @@ export const projects: Project[] = [
   {
     id: 14,
     title: "Pomodoro App",
-    des: "Track and manage your time effectively using the Pomodoro Technique with Angular and Tailwind.",
+    des: "Boost productivity with the Pomodoro Technique.",
     img: Pomodoro,
     tags: [tags.angular, tags.tailwind, tags.scss],
     live_link: "https://pomodoro-app-flame-eight.vercel.app",
@@ -207,16 +211,43 @@ export const projects: Project[] = [
   {
     id: 14,
     title: "Link Sharing App",
-    des: "Create and share your personal link tree easily using Next.js and Prisma",
-    img: Pomodoro,
+    des: "Create and share your personal link tree.",
+    img: LinkSharing,
     tags: [tags["next.js"], tags["Framer Motion"], tags.prisma, tags.tailwind],
     live_link: "https://link-sharing-app-bay.vercel.app",
     source_code_link: "https://github.com/TofikE124/link-sharing-app",
   },
   {
+    id: 15,
+    title: "Connect 4 Game",
+    des: "Classic game with a modern twist. Connect four discs to win.",
+    img: ConnectFourGame,
+    tags: [tags["next.js"], tags["Framer Motion"], tags.scss, tags.tailwind],
+    live_link: "https://connect-four-murex.vercel.app/",
+    source_code_link: "https://github.com/TofikE124/connect-four",
+  },
+  {
+    id: 16,
+    title: "Hangman Game",
+    des: "Guess the word before the hangman wins.",
+    img: HangmanGame,
+    tags: [tags.angular, tags.scss, tags.tailwind],
+    live_link: "https://hangman-game-three-dun.vercel.app",
+    source_code_link: "https://github.com/TofikE124/hangman-game",
+  },
+  {
+    id: 17,
+    title: "Memory Game",
+    des: "Match pairs of cards to test your memory.",
+    img: MemoryGame,
+    tags: [tags["next.js"], tags["Framer Motion"], tags.scss, tags.tailwind],
+    live_link: "https://memory-game-rho-two.vercel.app",
+    source_code_link: "https://github.com/TofikE124/memory-game",
+  },
+  {
     id: 1,
     title: "Product Feedback App",
-    des: "Submit and discuss ideas with this Next.js, Prisma & NextAuth app.",
+    des: "Submit and discuss product ideas.",
     img: ProductFeedbackApp,
     tags: [tags["next.js"], tags.scss, tags.tailwind, tags.prisma],
     live_link: "https://product-feedback-app-beta-five.vercel.app",
@@ -225,7 +256,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "Invoice App",
-    des: "Create and manage invoices effortlessly with Next.js, Prisma & NextAuth.",
+    des: "Create and manage invoices efficiently.",
     img: InvoiceApp,
     tags: [tags["next.js"], tags.scss, tags.tailwind, tags.prisma],
     live_link: "https://invoice-app-kvha.vercel.app",
@@ -234,7 +265,7 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "O-Shop",
-    des: "Seamless shopping experience for organics with Angular and Firebase.",
+    des: "Online organic shopping experience.",
     img: Oshop,
     tags: [tags.angular, tags.firebase, tags.tailwind],
     live_link: "https://angular-shopping-8a56d.web.app/",
@@ -243,7 +274,7 @@ export const projects: Project[] = [
   {
     id: 4,
     title: "Entertainment Web App",
-    des: "Explore movies and TV shows with React.",
+    des: "Discover movies and TV shows.",
     img: EntertainmentWebApp,
     tags: [tags.angular, tags.firebase, tags.tailwind],
     live_link:
@@ -254,7 +285,7 @@ export const projects: Project[] = [
   {
     id: 6,
     title: "Where in the world?",
-    des: "Find countries by name or region with Angular and REST Countries API.",
+    des: "Explore countries worldwide.",
     img: WhereInTheWorld,
     tags: [tags.angular, tags.api],
     live_link: "https://tofik-where-in-the-world.netlify.app",
@@ -263,7 +294,7 @@ export const projects: Project[] = [
   {
     id: 7,
     title: "Designo",
-    des: "Showcase of web, app, and graphic designs with React and CSS.",
+    des: "Showcase of web, app, and graphic designs.",
     img: Designo,
     tags: [tags.react, tags.css],
     live_link: "https://gorgeous-brioche-7c0074.netlify.app",
@@ -272,7 +303,7 @@ export const projects: Project[] = [
   {
     id: 8,
     title: "Rock Paper Scissors Lizard Spock",
-    des: "Play the classic game with Next.js and SCSS.",
+    des: "Classic game with added complexity.",
     img: RockPaperScissors,
     tags: [tags["next.js"], tags.scss],
     live_link: "https://rock-paper-scissors-eta-sepia.vercel.app",
@@ -281,7 +312,7 @@ export const projects: Project[] = [
   {
     id: 9,
     title: "Audiophile",
-    des: "Shop for headphones with React and local storage.",
+    des: "Shop for high-quality headphones.",
     img: Audiophile,
     tags: [tags.react, tags.css, tags.localStorage],
     live_link: "https://brilliant-begonia-545122.netlify.app",
@@ -291,7 +322,7 @@ export const projects: Project[] = [
   {
     id: 10,
     title: "Interactive Comments Section",
-    des: "Comment, upvote, and downvote with Next.js, NextAuth, and Prisma.",
+    des: "Engage in discussions with others.",
     img: InteractiveCommentsSection,
     tags: [tags["next.js"], tags.prisma, tags.tailwind],
     live_link: "https://interactive-comments-section-pxi1.vercel.app",
@@ -301,7 +332,7 @@ export const projects: Project[] = [
   {
     id: 11,
     title: "Issue Tracker",
-    des: "Add and categorize issues with Next.js, Prisma, and NextAuth.",
+    des: "Efficiently manage and track issues.",
     img: IssueTracker,
     tags: [tags["next.js"], tags.prisma, tags.tailwind],
     live_link: "https://issue-tracker-u639.vercel.app",
@@ -310,7 +341,7 @@ export const projects: Project[] = [
   {
     id: 12,
     title: "Multi Step Form",
-    des: "Sleek multi-form web page with React, React Hook Form, and Zod.",
+    des: "User-friendly multi-step form.",
     img: MultiStepForm,
     tags: [tags.react, tags.css],
     live_link: "https://inspiring-truffle-aa8631.netlify.app",

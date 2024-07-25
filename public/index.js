@@ -35,6 +35,10 @@ import WhereInTheWorld from "./work/WhereInTheWorld.png";
 import InvoiceApp from "./work/InvoiceApp.png";
 import Oshop from "./work/Oshop.png";
 import Pomodoro from "./work/Pomodoro.png";
+import LinkSharing from "./work/LinkSharing.png";
+import ConnectFourGame from "./work/ConnectFour.png";
+import HangmanGame from "./work/Hangman.png";
+import MemoryGame from "./work/MemoryGame.png";
 
 export {
   css,
@@ -73,4 +77,8 @@ export {
   InvoiceApp,
   Oshop,
   Pomodoro,
+  LinkSharing,
+  HangmanGame,
+  ConnectFourGame,
+  MemoryGame,
 };
